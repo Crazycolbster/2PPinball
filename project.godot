@@ -16,7 +16,17 @@ _global_script_class_icons={
 [application]
 
 config/name="2PPinball"
-config/icon="res://icon.png"
+run/main_scene="res://Main.tscn"
+config/icon="res://Ball.png"
+
+[display]
+
+window/size/width=1600
+window/size/height=900
+
+[physics]
+
+2d/default_gravity=440
 
 [rendering]
 

@@ -1,3 +1,17 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Ball.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Ball.gd" type="Script" id=2]
 
 [node name="Main" type="Node2D"]
+
+[node name="Ball" parent="." instance=ExtResource( 1 )]
+position = Vector2( 608.326, 49.6791 )
+script = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 37.9412, 33.118 )
+scale = Vector2( 1.41678, 1.17743 )
+polygon = PoolVector2Array( 23.1033, 24.1661, 23.1032, 265.782, 29.6927, 303.792, 23.1032, 331.298, 23.1033, 581.536, 82.0867, 581.096, 125.381, 582.553, 150.109, 580.589, 424.65, 578.54, 424.65, 466.109, 419.161, 447.213, 424.65, 411.933, 424.65, 251.923, 424.197, 233.092, 424.65, 200.266, 424.65, 36.1526, 454.616, 36.1526, 457.612, 617.496, -21.8459, 626.486, -18.8494, 15.1763, -12.428, 13.2547 )
